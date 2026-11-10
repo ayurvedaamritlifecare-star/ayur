@@ -1,5 +1,5 @@
 // ===== Settings (yahin edit karein) =====
-const WHATSAPP = "919821212203";   // country code + number, bina + ya space ke
+const WHATSAPP = "917678646408";   // country code + number, bina + ya space ke
 const EMAIL = "Amritlifecareayurveda@gmail.com";
 
 const $ = id => document.getElementById(id);
@@ -102,15 +102,16 @@ form.addEventListener('submit', e => {
   if (!okAddr) return show('कृपया अपना पूरा पता लिखें (मकान नं., एरिया, शहर, राज्य)।', true);
   if (!okPin) return show('कृपया सही 6 अंकों का पिनकोड डालें।', true);
 
+  const opt = $('product').selectedOptions[0];
   const text =
-`नया ऑर्डर – AMRIT THOR POWER कॉम्बो किट (₹2500)
-किट: कैप्सूल 30 + ऑयल 30ml + पाउडर 50g
+`नई इंक्वायरी / ऑर्डर – ${opt.dataset.name} (₹${opt.dataset.price})
+प्रोडक्ट: ${opt.dataset.size}
 नाम: ${n}
 मोबाइल: ${p}
 पता: ${a}
 पिनकोड: ${pin}`;
 
-  show('धन्यवाद! आपका ऑर्डर मैसेज खुल रहा है...', false);
+  show('धन्यवाद! WhatsApp खुल रहा है, मैसेज भेज दें।', false);
   if (typeof gtag === 'function') gtag('event', 'conversion_lead'); // Google Ads hook
 
   location.href = WHATSAPP
@@ -118,9 +119,10 @@ form.addEventListener('submit', e => {
     : `mailto:${EMAIL}?subject=${encodeURIComponent('नया ऑर्डर – AMRIT THOR POWER कॉम्बो किट')}&body=${encodeURIComponent(text)}`;
 });
 
-// ===== Product cards: WhatsApp buttons =====
-document.querySelectorAll('.wa-btn').forEach(a => {
-  const t = `नमस्ते, मुझे ${a.dataset.product} (${a.dataset.size}) ऑर्डर करना है। कीमत: ₹${a.dataset.price}। कृपया आगे की जानकारी दें।`;
-  a.href = `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(t)}`;
-  a.addEventListener('click', () => { if (typeof gtag === 'function') gtag('event', 'conversion_lead'); });
-});
+// ===== Product cards: button -> enquiry form (product pre-select) =====
+document.querySelectorAll('.enq-btn').forEach(a => a.addEventListener('click', () => {
+  const map = { 'AMRIT THOR POWER कैप्सूल': 'capsule', 'AMRIT THOR POWER ऑयल': 'oil', 'AMRIT THOR POWER पाउडर': 'powder' };
+  const sel = $('product');
+  if (sel && map[a.dataset.product]) sel.value = map[a.dataset.product];
+  setTimeout(() => $('name') && $('name').focus({ preventScroll: true }), 700);
+}));

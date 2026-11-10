@@ -76,9 +76,9 @@
     <h2>एक नाम, तीन फॉर्मूले</h2>
     <p class="sub">AMRIT THOR POWER के तीनों प्रोडक्ट्स – हर एक का अपना काम।</p>
     <div class="kit-grid">
-      <article class="panel spot rv tilt feat"><img class="p-img" src="thor-capsule.jpg" alt="THOR POWER कैप्सूल" width="640" height="800" loading="lazy"><span class="big">30<small>कैप्सूल</small></span><h3>💊 THOR POWER कैप्सूल</h3><p>पुरुषों की सेहत के लिए आयुर्वेदिक कैप्सूल। पैक पर बताए अनुसार लें।</p><div class="p-price">₹1650</div><a class="btn wa-btn" href="#" target="_blank" rel="noopener" data-product="AMRIT THOR POWER कैप्सूल" data-size="30 कैप्सूल" data-price="1650">💬 WhatsApp पर ऑर्डर करें</a></article>
-      <article class="panel spot rv tilt"><img class="p-img" src="thor-oil.jpg" alt="THOR POWER ऑयल" width="640" height="800" loading="lazy"><span class="big">30<small>ml</small></span><h3>🧴 THOR POWER ऑयल</h3><p>बाहरी उपयोग के लिए आयुर्वेदिक तेल। लेबल पर दिए निर्देश के अनुसार इस्तेमाल करें।</p><div class="p-price">₹999</div><a class="btn wa-btn" href="#" target="_blank" rel="noopener" data-product="AMRIT THOR POWER ऑयल" data-size="30ml" data-price="999">💬 WhatsApp पर ऑर्डर करें</a></article>
-      <article class="panel spot rv tilt"><img class="p-img" src="thor-powder.jpg" alt="THOR POWER पाउडर" width="640" height="800" loading="lazy"><span class="big">50<small>ग्राम</small></span><h3>🌿 THOR POWER पाउडर</h3><p>आयुर्वेदिक पाउडर फॉर्मूला। लेबल पर दिए निर्देश के अनुसार लें।</p><div class="p-price">₹1450</div><a class="btn wa-btn" href="#" target="_blank" rel="noopener" data-product="AMRIT THOR POWER पाउडर" data-size="50 ग्राम" data-price="1450">💬 WhatsApp पर ऑर्डर करें</a></article>
+      <article class="panel spot rv tilt feat"><img class="p-img" src="thor-capsule.jpg" alt="THOR POWER कैप्सूल" width="640" height="800" loading="lazy"><span class="big">30<small>कैप्सूल</small></span><h3>💊 THOR POWER कैप्सूल</h3><p>पुरुषों की सेहत के लिए आयुर्वेदिक कैप्सूल। पैक पर बताए अनुसार लें।</p><div class="p-price">₹1650</div><a class="btn enq-btn" href="#order" data-product="AMRIT THOR POWER कैप्सूल" data-size="30 कैप्सूल" data-price="1650">📝 इंक्वायरी / ऑर्डर करें</a></article>
+      <article class="panel spot rv tilt"><img class="p-img" src="thor-oil.jpg" alt="THOR POWER ऑयल" width="640" height="800" loading="lazy"><span class="big">30<small>ml</small></span><h3>🧴 THOR POWER ऑयल</h3><p>बाहरी उपयोग के लिए आयुर्वेदिक तेल। लेबल पर दिए निर्देश के अनुसार इस्तेमाल करें।</p><div class="p-price">₹999</div><a class="btn enq-btn" href="#order" data-product="AMRIT THOR POWER ऑयल" data-size="30ml" data-price="999">📝 इंक्वायरी / ऑर्डर करें</a></article>
+      <article class="panel spot rv tilt"><img class="p-img" src="thor-powder.jpg" alt="THOR POWER पाउडर" width="640" height="800" loading="lazy"><span class="big">50<small>ग्राम</small></span><h3>🌿 THOR POWER पाउडर</h3><p>आयुर्वेदिक पाउडर फॉर्मूला। लेबल पर दिए निर्देश के अनुसार लें।</p><div class="p-price">₹1450</div><a class="btn enq-btn" href="#order" data-product="AMRIT THOR POWER पाउडर" data-size="50 ग्राम" data-price="1450">📝 इंक्वायरी / ऑर्डर करें</a></article>
     </div>
 </section>
 
@@ -150,12 +150,18 @@
         <p>कैप्सूल 30 + ऑयल 30ml + पाउडर 50g</p>
       </div>
       <form id="form" novalidate>
-        <h2>अपनी किट बुक करें</h2>
+        <h2>इंक्वायरी / ऑर्डर फॉर्म</h2>
+        <div><label for="product">प्रोडक्ट चुनें</label><select id="product" name="product">
+            <option value="combo" data-name="AMRIT THOR POWER कॉम्बो किट" data-size="कैप्सूल 30 + ऑयल 30ml + पाउडर 50g" data-price="2500">कॉम्बो किट (तीनों) – ₹2500</option>
+            <option value="capsule" data-name="AMRIT THOR POWER कैप्सूल" data-size="30 कैप्सूल" data-price="1650">THOR POWER कैप्सूल (30) – ₹1650</option>
+            <option value="oil" data-name="AMRIT THOR POWER ऑयल" data-size="30ml" data-price="999">THOR POWER ऑयल (30ml) – ₹999</option>
+            <option value="powder" data-name="AMRIT THOR POWER पाउडर" data-size="50 ग्राम" data-price="1450">THOR POWER पाउडर (50g) – ₹1450</option>
+          </select></div>
         <div><label for="name">पूरा नाम</label><input id="name" name="name" required autocomplete="name"></div>
         <div><label for="phone">मोबाइल नंबर</label><input id="phone" name="phone" type="tel" inputmode="numeric" maxlength="10" placeholder="10 अंकों का नंबर" required autocomplete="tel-national"></div>
         <div><label for="addr">पूरा पता (मकान नं., एरिया, शहर, राज्य)</label><textarea id="addr" name="address" rows="3" required autocomplete="street-address"></textarea></div>
         <div><label for="pin">पिनकोड</label><input id="pin" name="pincode" type="tel" inputmode="numeric" maxlength="6" placeholder="6 अंकों का पिनकोड" required autocomplete="postal-code"></div>
-        <button class="btn" type="submit">ऑर्डर कन्फर्म करें</button>
+        <button class="btn" type="submit">WhatsApp पर भेजें</button>
         <p class="msg" id="msg" role="status" aria-live="polite"></p>
       </form>
     </div>
@@ -169,7 +175,7 @@
     <details><summary>कॉम्बो किट में क्या-क्या है?</summary><p>एक THOR POWER ऑयल (30ml), THOR POWER वेज कैप्सूल (30 कैप्सूल) और THOR POWER पाउडर (50g)।</p></details>
     <details><summary>कीमत क्या है?</summary><p>MRP ₹7570 है। पूरे कॉम्बो किट का मौजूदा ऑफर प्राइस ₹2500 है।</p></details>
     <details><summary>इस्तेमाल कैसे करें?</summary><p>हर प्रोडक्ट के लेबल पर दिए निर्देशों का पालन करें। अगर आपको कोई बीमारी है या आप नियमित दवाइयाँ लेते हैं, तो इस्तेमाल से पहले डॉक्टर या आयुर्वेदिक वैद्य से सलाह लें।</p></details>
-    <details><summary>आपसे संपर्क कैसे करें?</summary><p>ऑर्डर फॉर्म भरें या Amritlifecareayurveda@gmail.com पर ईमेल करें।</p></details>
+    <details><summary>आपसे संपर्क कैसे करें?</summary><p>ऑर्डर फॉर्म भरें, <a href="tel:+917678646408">7678646408</a> पर कॉल/WhatsApp करें या Amritlifecareayurveda@gmail.com पर ईमेल करें।</p></details>
   </div>
 </section>
 </main>
@@ -177,7 +183,7 @@
 <footer>
   <div class="wrap f-grid">
     <div><img src="logo.png" alt="Amrit Life Care Ayurveda" width="138" height="130" loading="lazy"><p>Amrit Life Care Ayurveda</p></div>
-    <div><p><b>संपर्क</b></p><p>✉ <a href="mailto:Amritlifecareayurveda@gmail.com">Amritlifecareayurveda@gmail.com</a></p><p>📍 उत्तम नगर वेस्ट, दिल्ली – 110059</p></div>
+    <div><p><b>संपर्क</b></p><p>📞 <a href="tel:+917678646408">7678646408</a> (कॉल / WhatsApp)</p><p>✉ <a href="mailto:Amritlifecareayurveda@gmail.com">Amritlifecareayurveda@gmail.com</a></p><p>📍 उत्तम नगर वेस्ट, दिल्ली – 110059</p></div>
     <p class="disc">डिस्क्लेमर: इन कथनों का मूल्यांकन किसी सरकारी संस्था द्वारा नहीं किया गया है। यह प्रोडक्ट किसी बीमारी का निदान, उपचार या रोकथाम करने के लिए नहीं है। परिणाम हर व्यक्ति में अलग हो सकते हैं। निर्देशानुसार उपयोग करें और इस्तेमाल से पहले योग्य चिकित्सक से सलाह लें। केवल वयस्कों (18+) के लिए।</p>
   </div>
 </footer>

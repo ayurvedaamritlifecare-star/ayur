@@ -254,5 +254,7 @@ footer a{color:var(--yellow);word-break:break-all}
 .panel .p-img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:16px;margin-bottom:18px}
 .panel .p-price{font:800 2.4rem/1 'Baloo 2',sans-serif;color:var(--orange);margin:14px 0 16px}
 .panel.feat .p-price{color:var(--yellow)}
-.panel .wa-btn{display:block;background:#25D366;box-shadow:0 10px 26px rgba(37,211,102,.4)}
-.panel .wa-btn:hover{box-shadow:0 16px 34px rgba(37,211,102,.55)}
+/* select (order form) */
+select{width:100%;padding:13px 15px;border:2px solid #eadfbd;border-radius:12px;font:inherit;font-size:16px;background:#fffdf6;color:var(--ink)}
+select:focus{outline:0;border-color:var(--orange);box-shadow:0 0 0 4px rgba(242,106,10,.15)}
+.panel .enq-btn{display:block}
