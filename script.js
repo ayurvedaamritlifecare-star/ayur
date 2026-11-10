@@ -1,5 +1,5 @@
 // ===== Settings (yahin edit karein) =====
-const WHATSAPP = "";   // e.g. "919876543210" (country code + number, bina + ya space ke). Khali = email khulega
+const WHATSAPP = "919821212203";   // country code + number, bina + ya space ke
 const EMAIL = "Amritlifecareayurveda@gmail.com";
 
 const $ = id => document.getElementById(id);
@@ -116,4 +116,11 @@ form.addEventListener('submit', e => {
   location.href = WHATSAPP
     ? `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(text)}`
     : `mailto:${EMAIL}?subject=${encodeURIComponent('नया ऑर्डर – AMRIT THOR POWER कॉम्बो किट')}&body=${encodeURIComponent(text)}`;
+});
+
+// ===== Product cards: WhatsApp buttons =====
+document.querySelectorAll('.wa-btn').forEach(a => {
+  const t = `नमस्ते, मुझे ${a.dataset.product} (${a.dataset.size}) ऑर्डर करना है। कीमत: ₹${a.dataset.price}। कृपया आगे की जानकारी दें।`;
+  a.href = `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(t)}`;
+  a.addEventListener('click', () => { if (typeof gtag === 'function') gtag('event', 'conversion_lead'); });
 });

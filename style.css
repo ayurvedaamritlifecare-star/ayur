@@ -249,3 +249,10 @@ footer a{color:var(--yellow);word-break:break-all}
 .thor-cta-text{color:var(--muted);margin-bottom:20px}
 @media(max-width:1000px){.thor-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:560px){.thor-grid{grid-template-columns:1fr}.thor-lead{font-size:1.25rem}}
+
+/* product cards: image + price + WhatsApp */
+.panel .p-img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:16px;margin-bottom:18px}
+.panel .p-price{font:800 2.4rem/1 'Baloo 2',sans-serif;color:var(--orange);margin:14px 0 16px}
+.panel.feat .p-price{color:var(--yellow)}
+.panel .wa-btn{display:block;background:#25D366;box-shadow:0 10px 26px rgba(37,211,102,.4)}
+.panel .wa-btn:hover{box-shadow:0 16px 34px rgba(37,211,102,.55)}
